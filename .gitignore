@@ -1,0 +1,11 @@
+# team working vaults (created by new_lab_vault.sh — they live inside the repo)
+lab-vault-*/
+.obsidian/
+
+# OS + python noise
+.DS_Store
+__pycache__/
+*.pyc
+
+# accidental editor swaps
+*~

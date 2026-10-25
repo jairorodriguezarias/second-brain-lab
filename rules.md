@@ -8,7 +8,7 @@
 - **ARCHIVE** = `4 - Archive.md` — completed things, dated (`- [x] <item> - done YYYY-MM-DD`). Agent: never writes directly — only the runner's DONE appends here.
 - **CONTRACT** = `rules.md` (this file) — PARA map + R1–R4. The runner puts it in every prompt.
 
-Tooling (not PARA data; do not cite these): `lab_runner.py` (the runner the agent talks through) · `new_lab_vault.sh` (makes a team copy) · `AGENTS.md` (guide for coding agents) · `00–03` team notes.
+Tooling (not PARA data; do not cite these): `lab_runner.py` (the runner the agent talks through) · `new_lab_vault.sh` (makes a team copy) · `AGENTS.md` (guide for coding agents).
 
 ## The 4 rules
 

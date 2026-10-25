@@ -1,4 +1,4 @@
-# Second Brain Lab — harness · loop · graph on a 2B model
+# Second Brain Lab — a minimal local starter
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-A51C30)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.9%2B-3776AB)](https://www.python.org/)
@@ -6,17 +6,15 @@
 ![Keys](https://img.shields.io/badge/API_keys-none-000000)
 ![Cloud](https://img.shields.io/badge/cloud-none-000000)
 
-Make a small model behave like a real assistant. One local model — `gemma4:e2b-it-qat`
-on ollama — becomes your personal second brain because its **memory lives in files, not in the
-model**. In one session you build the three engineering layers that turn a failing chatbot into a
-harnessed, honest, routed assistant:
+> **The minimum to start:** one small local model — `gemma4:e2b-it-qat` on ollama — reading
+> your own PARA notes. No keys, no cloud, no pip. That's the whole product. Everything else
+> (context engineering, research loops, routing, the human gate) we **grow together in class**.
 
-1. **Harness** — a to-do and a second brain that survive new sessions (files in the prompt, always)
-2. **Loop** — research one topic with a draft → self-critique → refine cycle that can honest-fail
-3. **Graph** — route each request (TASK / FACT / NEW); a 👤 **human gate** is the only way anything
-   gets written into the second brain
-
-The vault students build is **PARA-native** — the same triage methodology professionals use.
+A 2B model on its own forgets everything between calls and invents facts. The fix is not a
+bigger model — it's **files**: your to-do and your notes go into the prompt each turn, and the
+model's memory lives in those files, not in its weights. This repo is the smallest setup that
+makes that work, plus a runner with marked `TODO`s that become the path we walk during the
+session. The vault you build is **PARA-native** — the same triage methodology professionals use.
 
 ## Requirements
 
@@ -27,22 +25,21 @@ The vault students build is **PARA-native** — the same triage methodology prof
 ## Start in 5 commands
 
 ```bash
-git clone https://github.com/<you>/second-brain-lab.git   # or Code → Download ZIP → unzip
+git clone https://github.com/jairorodriguezarias/second-brain-lab.git   # or Code → Download ZIP → unzip
 cd second-brain-lab
 bash new_lab_vault.sh alfa        # your working vault → lab-vault-alfa/ (+ Obsidian opens it)
-python3 lab_runner.py             # the opening demo: honest research loop + one routed question
+python3 lab_runner.py             # the opening demo: a research pass + one routed question
 ```
 
 Then open `lab_runner.py` and work the **TODOs in order** (they live in the file as comments) —
-one TODO per pass, two lines in `if __name__ == "__main__":` swapped as you go:
+one TODO per pass, two lines in `if __name__ == "__main__":` swapped as you go. Each TODO is a
+small, nameable fix; we introduce the concept behind each one live in class.
 
-| Layer | TODOs | What happens |
-|---|---|---|
-| **A · Harness** | A1–A4 | bare model → amnesia receipt · files in prompt → it KNOWS · typed contract `{"action":"ADD\|DONE\|MOVE\|DELETE","item":...,"cite":"SOURCE: 1 - Projects.md"}` · DONE moves the line to `4 - Archive.md`, dated |
-| **B · Loop** | B1–B4 | draft → self-critique → refine · evidence checks (≥2 SOURCE lines + OPEN QUESTION, no invented numbers) · fail-on-purpose confidence exit · your own rule R6 |
-| **C · Graph** | C1–C2 | cold router misroutes → few-shot + § catalog fix · TASK / FACT / NEW · NEW = draft → 👤 human gate → only write path into `3 - Resources.md` |
-
-Log **every** model call in `00 - Lab Notebook.md` — append-only evidence.
+| TODOs | What happens when you finish them |
+|---|---|
+| **A1–A4** | bare model → the amnesia receipt · files in the prompt → it KNOWS · typed contract `{"action":"ADD\|DONE\|MOVE\|DELETE","item":...,"cite":"SOURCE: 1 - Projects.md"}` · DONE moves the line to `4 - Archive.md`, dated |
+| **B1–B4** | draft → self-critique → refine · evidence checks (≥2 SOURCE lines + OPEN QUESTION, no invented numbers) · an honest-fail exit · your own rule R6 |
+| **C1–C2** | cold router misroutes → few-shot + § catalog fix · TASK / FACT / NEW · NEW = draft → 👤 human gate → only write path into `3 - Resources.md` |
 
 ## What's inside (the lab vault, per team)
 
@@ -54,8 +51,7 @@ Log **every** model call in `00 - Lab Notebook.md` — append-only evidence.
 | `4 - Archive.md` | done things, dated (`- [x] <item> - done <date>`) — the runner's DONE appends here |
 | `rules.md` | the model's contract: PARA file map + rules R1–R4 |
 | `AGENTS.md` | the guide for coding agents (Claude Code, Codex, pi, …) |
-| `lab_runner.py` | the starter runner you build on |
-| `00 – 03` notes | team lab log + one note per layer (A Harness · B Loop · C Graph) |
+| `lab_runner.py` | the starter runner you grow during class |
 | `new_lab_vault.sh` | makes the team copies + configures Obsidian + warms the model |
 
 ## Ground rules
@@ -77,15 +73,17 @@ Log **every** model call in `00 - Lab Notebook.md` — append-only evidence.
 
 ## Instructor notes
 
-The full run-sheet (75-minute format, three phases, roles B/R/T/F, rubric, QA drill) lives in the
+The full run-sheet (75-minute format, three phases, roles, rubric, QA drill) lives in the
 course kit — *AI Novelties Masterclass, ISDI*. The instructor scripts (finished versions of these
-TODOs, with all quirks pre-fixed) mirror this repo.
+TODOs, with all quirks pre-fixed) mirror this repo. **This repo is deliberately the minimum** —
+the concepts land when we build them live, not when students read a README.
 
 ## License
 
-MIT © 2026 [Jairo Rodriguez Arias](https://github.com/) — *AI Novelties Masterclass, ISDI.*
+MIT © 2026 [Jairo Rodriguez Arias](https://github.com/jairorodriguezarias) — *AI Novelties
+Masterclass, ISDI.*
 
 ---
 
-*The model answers wrong on purpose at least twice today. That's the point — every fix is a line
-you can name, not luck.*
+*Start small. The model is wrong on purpose at least twice today — every fix is a line you can
+name, not luck.*

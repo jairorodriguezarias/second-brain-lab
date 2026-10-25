@@ -87,7 +87,7 @@ def research(question, attempts=4, max_seconds=240):
                         + "\n\nPREVIOUS NOTE:\n" + answer
                         + "\n\nNotes:\n" + read(RESOURCES) + "\n\n" + question}])
     return {"exited": "EXHAUSTION", "attempts": attempts, "answer": answer, "log": log}
-    # TODO B3 (fail-on-purpose): one bare call, no checks -> CONFIDENCE exit -> paste into 02 - B Loop.md (kept)
+    # TODO B3 (fail-on-purpose): one bare call, no checks -> CONFIDENCE exit -> paste into your team notebook (kept)
     # TODO B4 (4th loop): pick ONE line of the log -> it becomes rule R6 in rules.md
 
 # ---- C · GRAPH: TASK | FACT | NEW -> only the GATE writes into Resources ----

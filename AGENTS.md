@@ -4,14 +4,13 @@ Guide for AI agents (and humans acting like one) working inside this lab vault.
 
 ## What this vault is
 
-A **mini-PARA vault** used in the **Harness · Loop · Graph lab** (AI Novelties Masterclass, ISDI).
-The idea of the lab: an agent's memory lives OUTSIDE the model — in these files — and the team
-builds the three engineering layers that make a small 2B model behave like a real assistant:
-
-1. **Harness** — maintain the to-do / second brain (context engineering: files → prompt)
-2. **Loop** — research ONE topic against the own notes (draft → critique → refine, with evidence rules)
-3. **Graph** — route each question (TASK / FACT / NEW) and act accordingly; the 👤 human gate is the
-   ONLY write path into the second brain
+A **mini-PARA vault** — the minimal starter for the *AI Novelties Masterclass* lab (ISDI).
+The core idea: an agent's memory lives OUTSIDE the model — in these files. This repo ships the
+smallest setup that makes that work (a local 2B model reading the PARA notes each turn) plus a
+runner with marked `TODO`s. The engineering layers behind those TODOs — **harness** (context
+engineering: files → prompt), **loop** (draft → critique → refine with evidence rules), and
+**graph** (route TASK / FACT / NEW; the 👤 human gate is the only write path into the second
+brain) — are introduced and built live in class, not pre-pitched in the kit.
 
 ## The map (do NOT rename — rules.md and lab_runner.py reference these exact names)
 
@@ -24,7 +23,6 @@ builds the three engineering layers that make a small 2B model behave like a rea
 - `new_lab_vault.sh` — creates a team copy of this vault (`lab-vault-<team>`)
 - `AGENTS.md` — the guide for coding agents (this file — they read it automatically)
 - `README.md` — the students' quickstart (humans start here)
-- `00–03` numbered notes — team lab notebook + one note per layer (A, B, C)
 
 ## The contract chain (who does what)
 
@@ -54,12 +52,17 @@ builds the three engineering layers that make a small 2B model behave like a rea
 - Do not invent facts (R1). If the information is NOT in the files, say so — the graph routes it
   as NEW → draft → human gate. Honest failure beats a confident invention.
 
-## Lab phases (read the numbered notes in order)
+## The growth path (the TODOs in `lab_runner.py`)
 
-- `00 - Lab Notebook.md` — team log; append-only evidence (EVERY model call gets logged)
-- `01 - A Harness.md` — context engineering; compare "bare model" vs "files in prompt"
-- `02 - B Loop.md` — draft → self-critique → refine, with the evidence rules
-- `03 - C Graph.md` — router TASK/FACT/NEW + `search_brain` + gated write
+The runner ships with marked `TODO`s grouped in three passes. The concept behind each pass is
+introduced in class; the TODO is the concrete fix the team writes.
+
+- **A · harness (A1–A4)** — context engineering: compare "bare model" vs "files in the prompt";
+  the typed contract; DONE → Archive.
+- **B · loop (B1–B4)** — draft → self-critique → refine; the evidence checks; an honest-fail exit;
+  one line of the log becomes rule R6.
+- **C · graph (C1–C2)** — router TASK / FACT / NEW; `search_brain`; the 👤 human gate as the only
+  write edge into `3 - Resources.md`.
 
 ## Acceptance criteria (what "done" means)
 

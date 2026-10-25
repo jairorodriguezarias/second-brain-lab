@@ -39,19 +39,19 @@ introduce the concept behind each one live, then you write it.
 
 | Phase | What your function does when it's done |
 |---|---|
-| **A — harness** | bare model → the amnesia receipt · files in the prompt → it KNOWS · typed contract `{"action":"ADD\|DONE\|MOVE\|DELETE","item":...,"cite":"SOURCE: 1 - Projects.md"}` · DONE moves the line to `4 - Archive.md`, dated |
+| **A — harness** | bare model → the amnesia receipt · files in the prompt → it KNOWS · typed contract `{"action":"ADD\|DONE\|MOVE\|DELETE","item":...,"cite":"SOURCE: 1 - Projects/Inbox.md"}` · DONE moves the line to `4 - Archive/`, dated |
 | **B — loop** | draft → self-critique → refine · evidence checks (≥2 SOURCE lines + OPEN QUESTION, no invented numbers) · an honest-fail exit · your own rule R6 |
-| **C — graph** | cold router misroutes → few-shot + § catalog fix · TASK / FACT / NEW · NEW = draft → 👤 human gate → only write path into `3 - Resources.md` |
+| **C — graph** | cold router misroutes → few-shot + § catalog fix · TASK / FACT / NEW · NEW = draft → 👤 human gate → only write path into `3 - Resources/` |
 
 ## What's inside (the lab vault, per team)
 
-| File | Role |
+| Folder / file | Role |
 |---|---|
-| `1 - Projects.md` | to-do — things with an end (the agent writes via the typed contract) |
-| `2 - Areas.md` | ongoing responsibilities — the agent READS, never writes |
-| `3 - Resources.md` | the second brain (sections start with `§ Name`) — writes ONLY via the human gate |
-| `4 - Archive.md` | done things, dated (`- [x] <item> - done <date>`) — the runner's DONE appends here |
-| `rules.md` | the model's contract: PARA file map + rules R1–R4 |
+| `1 - Projects/` | to-do folder — things with an end (the agent writes `Inbox.md` via the typed contract) |
+| `2 - Areas/` | ongoing responsibilities — the agent READS, never writes |
+| `3 - Resources/` | the second brain — one `.md` note per topic, each starting with `§ <Topic>`; writes ONLY via the human gate (a new note file) |
+| `4 - Archive/` | done things, dated (`- [x] <item> - done <date>` in a monthly `Archive — <YYYY-MM>.md`) — the runner's DONE appends here |
+| `rules.md` | the model's contract: PARA folder map + rules R1–R4 |
 | `AGENTS.md` | the guide for coding agents (Claude Code, Codex, pi, …) |
 | `new_lab_vault.sh` | makes the team copies + configures Obsidian + warms the model |
 

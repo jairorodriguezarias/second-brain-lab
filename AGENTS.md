@@ -21,13 +21,13 @@ into the second brain) — are introduced and built live, not pre-pitched in the
 - `4 - Archive/` — completed tasks, dated. The runner's DONE moves lines from Projects here, to a monthly `Archive — <YYYY-MM>.md`.
 - `rules.md` — the model's contract: PARA folder map + rules R1–R4 (Markdown, so it renders in Obsidian too). **Source of truth.**
 - `new_lab_vault.sh` — creates a team copy of this vault (`lab-vault-<team>`)
-- `scripts/` — minimal starters (research · slides · new_project) so a team has "algo por dónde arrancar" before building the runner in class
+- `scripts/` — skill scenarios (`brain_agent.py` · `brain_research.py` · `brain_graph.py` = the finished reference) + minimal starters (`slides.py` · `new_project.py`), so a team has "algo por dónde arrancar"
 - `AGENTS.md` — the guide for coding agents (this file — they read it automatically)
 - `README.md` — the students' quickstart (humans start here)
 
 > The runner is not shipped — the team writes it in class (3 functions: `agent` · `research`
-> · `route` + the `gate_write` edge). The instructor's finished version lives in the
-> `second-brain-lab` skill (`brain_agent.py` · `brain_research.py` · `brain_graph.py`).
+> · `route` + the `gate_write` edge). The finished reference scenarios live in `scripts/`
+> (`brain_agent.py` · `brain_research.py` · `brain_graph.py`).
 
 ## The contract chain (who does what)
 
@@ -49,8 +49,8 @@ into the second brain) — are introduced and built live, not pre-pitched in the
 ## For coding agents (Claude Code, Codex, pi, …) helping the team
 
 - Build the runner WITH the team — one function per phase (A `agent` · B `research` · C `route`
-  + `gate_write`), following the run-sheet. The instructor's finished reference is the
-  `second-brain-lab` skill (`brain_agent.py` · `brain_research.py` · `brain_graph.py`).
+  + `gate_write`), following the run-sheet. The finished reference scenarios are in `scripts/`
+  (`brain_agent.py` · `brain_research.py` · `brain_graph.py`).
 - Test in a COPY, never inside the template: `cp -R . /tmp/<team>` and run there.
 - NEVER hand-edit the data files to fake a pass — the runner + the gate must produce the change.
 - Do not change folder names, the cite format ("SOURCE: …"), or the § section convention.

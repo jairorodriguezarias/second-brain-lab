@@ -57,17 +57,28 @@ introduce the concept behind each one live, then you write it.
 
 ## Starters (algo por dónde arrancar)
 
-Three minimal starter scripts in `scripts/` — run them, then grow them in class:
+The lab repo carries two kinds of scripts in `scripts/`:
 
-| Script | What it does | Grow it into…
+**Skill scenarios** — the finished reference (the `second-brain-lab` skill's `brain_*.py`), so a team can study "what done looks like" before building their own:
+
+| Script | What it is (scenario) |
+|---|---|
+| `scripts/brain_agent.py` | A · HARNESS — questions get ANSWERS, commands get CONTRACTS (ollama gemma4, no PI) |
+| `scripts/brain_research.py` | B · LOOP — research ONE question from `3 - Resources/` with evidence checks + honest exits |
+| `scripts/brain_graph.py` | C · GRAPH — TASK / FACT / NEW routing + the 👤 human gate into `3 - Resources/` |
+
+**Minimal starters** — for the other skills (run them, then grow them in class):
+
+| Script | What it does (starter) | Grow it into… |
 |---|---|---|
-| `scripts/research.py` | asks ONE question against `3 - Resources/`, prints an answer + `SOURCE:` (ollama gemma4, no PI) | the full research loop (evidence checks, attempts, output file) — the `brain_research.py` skill |
-| `scripts/slides.py` | renders a `.deck.md` → `.html` `.pdf` `.pptx` via Marp (editorial theme) | themes, overflow scan, print kits — the `slides` skill |
-| `scripts/new_project.py` | mints a project note in `1 - Projects/` from a template (status + milestones) | the full course-design / vault-intake skills |
+| `scripts/slides.py` | renders a `.deck.md` → `.html` `.pdf` `.pptx` via Marp | themes, overflow scan, print kits — the `slides` skill |
+| `scripts/new_project.py` | mints a project note in `1 - Projects/` from a template (status + milestones) | course-design / vault-intake skills |
 
 
 ```bash
-python3 scripts/research.py "What's new in AI this week?"
+python3 scripts/brain_agent.py "what's my next pending task?"
+python3 scripts/brain_research.py "What's the deal with RAG?" --attempts 3
+python3 scripts/brain_graph.py "what gift for a friend's birthday?" --gate
 python3 scripts/slides.py "31 - Decks/My Deck.deck.md"
 python3 scripts/new_project.py "RAG Eval Harness"
 ```

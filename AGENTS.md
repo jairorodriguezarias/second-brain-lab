@@ -21,6 +21,7 @@ into the second brain) — are introduced and built live, not pre-pitched in the
 - `4 - Archive/` — completed tasks, dated. The runner's DONE moves lines from Projects here, to a monthly `Archive — <YYYY-MM>.md`.
 - `rules.md` — the model's contract: PARA folder map + rules R1–R4 (Markdown, so it renders in Obsidian too). **Source of truth.**
 - `new_lab_vault.sh` — creates a team copy of this vault (`lab-vault-<team>`)
+- `scripts/` — minimal starters (research · slides · new_project) so a team has "algo por dónde arrancar" before building the runner in class
 - `AGENTS.md` — the guide for coding agents (this file — they read it automatically)
 - `README.md` — the students' quickstart (humans start here)
 

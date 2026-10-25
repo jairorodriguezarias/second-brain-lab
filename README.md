@@ -55,6 +55,23 @@ introduce the concept behind each one live, then you write it.
 | `AGENTS.md` | the guide for coding agents (Claude Code, Codex, pi, …) |
 | `new_lab_vault.sh` | makes the team copies + configures Obsidian + warms the model |
 
+## Starters (algo por dónde arrancar)
+
+Three minimal starter scripts in `scripts/` — run them, then grow them in class:
+
+| Script | What it does | Grow it into…
+|---|---|---|
+| `scripts/research.py` | asks ONE question against `3 - Resources/`, prints an answer + `SOURCE:` (ollama gemma4, no PI) | the full research loop (evidence checks, attempts, output file) — the `brain_research.py` skill |
+| `scripts/slides.py` | renders a `.deck.md` → `.html` `.pdf` `.pptx` via Marp (editorial theme) | themes, overflow scan, print kits — the `slides` skill |
+| `scripts/new_project.py` | mints a project note in `1 - Projects/` from a template (status + milestones) | the full course-design / vault-intake skills |
+
+
+```bash
+python3 scripts/research.py "What's new in AI this week?"
+python3 scripts/slides.py "31 - Decks/My Deck.deck.md"
+python3 scripts/new_project.py "RAG Eval Harness"
+```
+
 ## Ground rules
 
 - **Never hand-edit the data files to fake a pass** — the runner and the gate must produce every change.

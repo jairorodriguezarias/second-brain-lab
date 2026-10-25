@@ -9,7 +9,7 @@ Ongoing responsibility (no end date). The masterclass lab, the ISDI course, the 
 - Student-fleet parity: everyone on the same model as the instructor (`gemma4:e2b-it-qat`)
 
 ## Active commitments
-- [[1 - Projects/Project — Local LLM Lab]] — the masterclass lab
+- [[Project — Local LLM Lab]] — the masterclass lab
 - ISDI "Panorama de la IA" (S2 done, S3 pending)
 - ADK Agents Course (7 modules built)
 
@@ -20,7 +20,7 @@ Ongoing responsibility (no end date). The masterclass lab, the ISDI course, the 
 
 ## Notes
 - Teaching Practice hub: `22 - Areas/Teaching Practice.md` (the grown-up version)
-- See [[3 - Resources/Context Engineering]] — the concept the lab teaches
+- See [[Context Engineering]] — the concept the lab teaches
 
 ---
 SOURCE: 2 - Areas/Area — AI Teaching.md

@@ -15,7 +15,7 @@ A tiny, stdlib-only eval harness for RAG: given a knowledge base (a folder of no
 ## Notes
 - Cite format: `SOURCE: 3 - Resources/<note>.md §<Topic>`.
 - Honest failure beats confident invention (R1). The harness must flag invented numbers.
-- See [[3 - Resources/RAG — Retrieval-Augmented Generation]] for the RAG taxonomy this evals.
+- See [[RAG — Retrieval-Augmented Generation]] for the RAG taxonomy this evals.
 
 ---
 SOURCE: 1 - Projects/Project — RAG Eval Harness.md

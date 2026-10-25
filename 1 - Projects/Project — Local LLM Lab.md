@@ -15,7 +15,7 @@ Run a 2B model on student laptops, reading each team's own PARA notes, with a ha
 
 ## Notes
 - The runner is built in class (3 functions: `agent` · `research` · `route` + `gate_write`); the skill's `brain_agent.py`/`brain_research.py`/`brain_graph.py` are the finished reference.
-- Model quirks (think:false, num_predict cap, keep_alive) are documented in [[3 - Resources/Ollama]].
+- Model quirks (think:false, num_predict cap, keep_alive) are documented in [[Ollama]].
 
 ---
 SOURCE: 1 - Projects/Project — Local LLM Lab.md

@@ -11,7 +11,7 @@ Ongoing responsibility (no end date). The AISB track + the chaos-monkey project 
 ## Active threads
 - AISB Part 2 practice (post-interview)
 - chaos-monkey design: intent-induction → jailbreak → exfiltration over the voice channel
-- RAG security: vector DB breach → embedding reversal → original-text leak (see [[3 - Resources/RAG — Retrieval-Augmented Generation]])
+- RAG security: vector DB breach → embedding reversal → original-text leak (see [[RAG — Retrieval-Augmented Generation]])
 
 ## Reusable assets
 - [[AISB — OWASP & AI Security Knowledge]]

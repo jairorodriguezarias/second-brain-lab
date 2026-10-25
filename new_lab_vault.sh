@@ -52,7 +52,7 @@ fi
 
 # 4) open in Obsidian (obsidian://open?path=<url-encoded absolute path>)
 echo "✓ vault ready: $DEST"
-echo "  run it:   cd \"$DEST\" && python3 lab_runner.py"
+echo "  build it: we write the runner together in class (3 functions: agent · research · route)"
 if [[ "${SKIP_OPEN:-0}" != "1" ]]; then
   ENC="$(python3 -c 'import urllib.parse,sys; print(urllib.parse.quote(sys.argv[1]))' "$DEST")"
   if open "obsidian://open?path=$ENC" 2>/dev/null; then

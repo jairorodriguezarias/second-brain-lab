@@ -13,8 +13,11 @@
 A 2B model on its own forgets everything between calls and invents facts. The fix is not a
 bigger model — it's **files**: your to-do and your notes go into the prompt each turn, and the
 model's memory lives in those files, not in its weights. This repo is the smallest setup that
-makes that work, plus a runner with marked `TODO`s that become the path we walk during the
-session. The vault you build is **PARA-native** — the same triage methodology professionals use.
+makes that work — a **PARA vault template** plus the agent's contract. The runner (the code that
+talks to the local model) is **built live in class**, one function per phase; the instructor's
+finished version lives in the `second-brain-lab` skill (`brain_agent.py` · `brain_research.py` ·
+`brain_graph.py`). The vault you build is **PARA-native** — the same triage methodology
+professionals use.
 
 ## Requirements
 
@@ -22,24 +25,23 @@ session. The vault you build is **PARA-native** — the same triage methodology 
 - the model: `ollama pull gemma4:e2b-it-qat` (~4.3 GB)
 - Python 3.9+ — **stdlib only: no pip, no venv, no internet during class**
 
-## Start in 5 commands
+## Start in 4 commands
 
 ```bash
 git clone https://github.com/jairorodriguezarias/second-brain-lab.git   # or Code → Download ZIP → unzip
 cd second-brain-lab
 bash new_lab_vault.sh alfa        # your working vault → lab-vault-alfa/ (+ Obsidian opens it)
-python3 lab_runner.py             # the opening demo: a research pass + one routed question
 ```
 
-Then open `lab_runner.py` and work the **TODOs in order** (they live in the file as comments) —
-one TODO per pass, two lines in `if __name__ == "__main__":` swapped as you go. Each TODO is a
-small, nameable fix; we introduce the concept behind each one live in class.
+Your team vault is ready in Obsidian. In class we build the runner together — three functions,
+one per phase (A · harness → B · loop → C · graph). Each function is a small, nameable fix; we
+introduce the concept behind each one live, then you write it.
 
-| TODOs | What happens when you finish them |
+| Phase | What your function does when it's done |
 |---|---|
-| **A1–A4** | bare model → the amnesia receipt · files in the prompt → it KNOWS · typed contract `{"action":"ADD\|DONE\|MOVE\|DELETE","item":...,"cite":"SOURCE: 1 - Projects.md"}` · DONE moves the line to `4 - Archive.md`, dated |
-| **B1–B4** | draft → self-critique → refine · evidence checks (≥2 SOURCE lines + OPEN QUESTION, no invented numbers) · an honest-fail exit · your own rule R6 |
-| **C1–C2** | cold router misroutes → few-shot + § catalog fix · TASK / FACT / NEW · NEW = draft → 👤 human gate → only write path into `3 - Resources.md` |
+| **A — harness** | bare model → the amnesia receipt · files in the prompt → it KNOWS · typed contract `{"action":"ADD\|DONE\|MOVE\|DELETE","item":...,"cite":"SOURCE: 1 - Projects.md"}` · DONE moves the line to `4 - Archive.md`, dated |
+| **B — loop** | draft → self-critique → refine · evidence checks (≥2 SOURCE lines + OPEN QUESTION, no invented numbers) · an honest-fail exit · your own rule R6 |
+| **C — graph** | cold router misroutes → few-shot + § catalog fix · TASK / FACT / NEW · NEW = draft → 👤 human gate → only write path into `3 - Resources.md` |
 
 ## What's inside (the lab vault, per team)
 
@@ -51,7 +53,6 @@ small, nameable fix; we introduce the concept behind each one live in class.
 | `4 - Archive.md` | done things, dated (`- [x] <item> - done <date>`) — the runner's DONE appends here |
 | `rules.md` | the model's contract: PARA file map + rules R1–R4 |
 | `AGENTS.md` | the guide for coding agents (Claude Code, Codex, pi, …) |
-| `lab_runner.py` | the starter runner you grow during class |
 | `new_lab_vault.sh` | makes the team copies + configures Obsidian + warms the model |
 
 ## Ground rules
@@ -68,15 +69,16 @@ small, nameable fix; we introduce the concept behind each one live in class.
 | Empty answer | `"think": false` missing — gemma4's default thinking eats the token budget |
 | 60-second timeouts | no `num_predict` cap — uncapped generation |
 | Everything routes to TASK | the router prompt lost its few-shot examples + § catalog |
-| `.py` files invisible in Obsidian | the launcher pre-enables "Detect all file extensions"; check `.obsidian/app.json` |
+| `.txt` files invisible in Obsidian | the launcher pre-enables "Detect all file extensions"; check `.obsidian/app.json` |
 | Cold calls take 5–6 s | normal; warm calls are 0.3–1 s — `keep_alive` is set to 30 m |
 
 ## Instructor notes
 
 The full run-sheet (75-minute format, three phases, roles, rubric, QA drill) lives in the
-course kit — *AI Novelties Masterclass, ISDI*. The instructor scripts (finished versions of these
-TODOs, with all quirks pre-fixed) mirror this repo. **This repo is deliberately the minimum** —
-the concepts land when we build them live, not when students read a README.
+course kit — *AI Novelties Masterclass, ISDI*. The instructor scripts (the finished versions of
+the three functions, with all quirks pre-fixed) live in the `second-brain-lab` skill
+(`brain_agent.py` · `brain_research.py` · `brain_graph.py`). **This repo is deliberately the
+minimum** — the concepts land when we build them live, not when students read a README.
 
 ## License
 

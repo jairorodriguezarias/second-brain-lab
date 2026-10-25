@@ -71,7 +71,7 @@ introduced in class; the TODO is the concrete fix the team writes.
 - **B**: the note exits as EVIDENCE — ≥2 SOURCE lines to real § sections + an explicit
   `OPEN QUESTION:` line + no invented numbers — or EXHAUSTION (the loop honest-fails).
 - **C**: "what's for dinner Friday?" → FACT + §Recipes · "next pending task?" → TASK ·
-  "gift ideas for my sister?" → NEW → draft → 👤 gate decides.
+  "gift ideas for a friend's birthday?" → NEW → draft → 👤 gate decides.
 
 ## Language
 

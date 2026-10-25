@@ -113,6 +113,6 @@ def gate_write(question, yes=True):
 
 if __name__ == "__main__":
     t0 = time.time()
-    r = research("What do I have planned for the Lisbon trip?")
+    r = research("What do I have planned for the weekend trip?")
     print(json.dumps({"exited": r["exited"], "log": [x["evidence"]["why"] for x in r["log"]]}, ensure_ascii=False))
     print("route:", route("what's for dinner Friday?"), f"[{round(time.time()-t0,1)}s]")
